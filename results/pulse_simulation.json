@@ -1,0 +1,28 @@
+{
+  "n_simulations": 2000,
+  "seed": 42,
+  "baseline_poisson_mean": 20.0,
+  "quiet_period_weeks": 26,
+  "outbreak_start_week": 31,
+  "ewma_parameters": {
+    "lambda": 0.3,
+    "L": 3.0,
+    "control_limit_formula": "mu + L * sigma * sqrt(lambda / (2 - lambda))"
+  },
+  "quiet_period_false_alarm_rate": 0.0002,
+  "scenarios": {
+    "10%_growth": {
+      "mean_lead_time_weeks": 2.41,
+      "median_lead_time_weeks": 2.0,
+      "mean_ewma_detection_week": 34.7,
+      "mean_2x_detection_week": 37.11
+    },
+    "25%_growth": {
+      "mean_lead_time_weeks": 0.76,
+      "median_lead_time_weeks": 1.0,
+      "mean_ewma_detection_week": 32.76,
+      "mean_2x_detection_week": 33.52
+    }
+  },
+  "key_finding": "EWMA detects outbreaks on average 2.41 weeks earlier for 10% weekly growth and 0.76 weeks earlier for 25% weekly growth compared to traditional 2x baseline rule."
+}

@@ -1,0 +1,8 @@
+NELLAI DIAGNOSTICS & RESEARCH LAB
+        PATIENT: DEMO CITIZEN | AGE: 45 | SEX: F
+        DATE: 10-APR-2026
+        ------------------------------------------
+        Haemoglobin (Hb)              : 10.1 g/dL     (12.0 - 16.0)
+        Platelet Count (PLT)          : 245,000 /µL   (150,000 - 450,000)
+        White Blood Cells (WBC)       : 6,100 /µL     (4,000 - 11,000)
+        ------------------------------------------

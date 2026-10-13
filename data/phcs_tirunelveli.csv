@@ -1,0 +1,11 @@
+id,name,block,district,lat,lng,phone,is_aam,zone_id
+PHC-01,Manur PHC (demo),Manur,Tirunelveli,8.8150,77.6850,+91-462-248101,true,ZONE-01
+PHC-02,Nanguneri PHC (demo),Nanguneri,Tirunelveli,8.4890,77.6620,+91-4635-250102,true,ZONE-02
+PHC-03,Radhapuram PHC (demo),Radhapuram,Tirunelveli,8.2710,77.6890,+91-4637-234103,true,ZONE-03
+PHC-04,Cheranmahadevi PHC (demo),Cheranmahadevi,Tirunelveli,8.6820,77.5620,+91-4634-260104,false,ZONE-04
+PHC-05,Ambasamudram PHC (demo),Ambasamudram,Tirunelveli,8.7080,77.4560,+91-4634-250105,true,ZONE-05
+PHC-06,Kadayam PHC (demo),Kadayam,Tirunelveli,8.8180,77.3820,+91-4634-240106,false,ZONE-06
+PHC-07,Kalakkad PHC (demo),Kalakkad,Tirunelveli,8.5140,77.5510,+91-4635-260107,true,ZONE-07
+PHC-08,Valliyoor PHC (demo),Valliyoor,Tirunelveli,8.3790,77.6180,+91-4637-220108,true,ZONE-08
+PHC-09,Palayamkottai Rural PHC (demo),Palayamkottai,Tirunelveli,8.7130,77.7340,+91-462-257109,false,ZONE-09
+PHC-10,Alangulam PHC (demo),Alangulam,Tirunelveli,8.8710,77.5020,+91-4633-270110,true,ZONE-10

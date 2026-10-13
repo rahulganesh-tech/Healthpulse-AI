@@ -1,0 +1,214 @@
+# DRAFT — to be reviewed and approved by the team’s clinical advisor before any real use.
+version: "0.3-draft"
+description: "HealthPulse AI Deterministic Danger-Sign and Red-Flag Safety Rules"
+rules:
+  - id: "RF-CHEST-01"
+    group: "adult"
+    level: "EMERGENCY"
+    action: "call_108"
+    message_en: "Possible heart emergency (Chest pain accompanied by sweating, breathlessness, radiation to arm/jaw, or age 40+). Call 108 immediately."
+    message_ta: "மாரடைப்பு அபாய அறிகுறி (நெஞ்சு வலி மற்றும் வியர்வை, மூச்சுத்திணறல், கை/தாடை வலி அல்லது 40 வயதுக்கு மேற்பட்டவர்கள்). உடனடியாக 108 அழைக்கவும்."
+    conditions:
+      any_of_symptoms: ["chest_pain", "chest_pressure"]
+      modifiers:
+        or:
+          symptoms: ["sweating", "breathless", "breathless_at_rest", "arm_jaw_pain"]
+          danger_answers: ["sweating", "breathless", "arm_jaw_pain"]
+          min_age: 40
+
+  - id: "RF-STROKE-02"
+    group: "any"
+    level: "EMERGENCY"
+    action: "call_108"
+    message_en: "Possible acute stroke (Sudden face droop, one-sided weakness, or slurred speech). Emergency hospital care needed immediately."
+    message_ta: "பக்கவாதம் அபாய அறிகுறி (திடீர் முகக் கோணல், ஒரு பக்க கை/கால் பலவீனம், அல்லது குழப்பமான பேச்சு). உடனே மருத்துவமனைக்குச் செல்லவும்."
+    conditions:
+      any_of_danger: ["face_droop", "one_sided_weakness", "slurred_speech"]
+      any_of_symptoms: ["face_droop", "one_sided_weakness", "slurred_speech", "paralysis"]
+
+  - id: "RF-BREATH-03"
+    group: "any"
+    level: "EMERGENCY"
+    action: "call_108"
+    message_en: "Severe respiratory distress (Severe breathlessness at rest, blue lips, or unable to speak full sentences). Call 108 now."
+    message_ta: "கடுமையான மூச்சுத் திணறல் (ஓய்விலும் மூச்சிரைப்பு, நீல நிற உதடுகள், பேச இயலாமை). உடனே 108 அழைக்கவும்."
+    conditions:
+      any_of_danger: ["breathless_at_rest", "blue_lips", "cant_speak_sentences"]
+      any_of_symptoms: ["severe_breathlessness"]
+
+  - id: "RF-CONSC-04"
+    group: "any"
+    level: "EMERGENCY"
+    action: "call_108"
+    message_en: "Altered consciousness or seizures (Unconsciousness, fits, or sudden new confusion). Immediate emergency hospital transport required."
+    message_ta: "நினைவிழப்பு அல்லது வலிப்பு (மயக்கம், வலிப்பு, அல்லது திடீர் மனக்குழப்பம்). அவசர உதவி தேவை."
+    conditions:
+      any_of_danger: ["unconscious", "fits", "seizures", "new_confusion"]
+      any_of_symptoms: ["unconscious", "fits", "confusion", "seizure"]
+
+  - id: "RF-BLEED-05"
+    group: "any"
+    level: "EMERGENCY"
+    action: "call_108"
+    message_en: "Critical bleeding (Vomiting blood, black stools, or severe uncontrolled bleeding). Emergency care required."
+    message_ta: "ஆபத்தான ரத்தப்போக்கு (ரத்த வாந்தி, கருப்பு மலம் அல்லது கட்டுக்கடங்காத ரத்தப்போக்கு). அவசர சிகிச்சை தேவை."
+    conditions:
+      any_of_danger: ["vomiting_blood", "black_stools", "heavy_bleeding"]
+      any_of_symptoms: ["vomiting_blood", "black_stools", "heavy_bleeding"]
+
+  - id: "RF-SNAKE-06"
+    group: "any"
+    level: "EMERGENCY"
+    action: "call_108"
+    message_en: "Suspected snake bite: Keep patient completely still and calm. DO NOT cut or tie tightly. Rush to PHC/hospital immediately for anti-snake venom."
+    message_ta: "பாம்புக்கடி சந்தேகம்: நோயாளியை அசையாமல் படுக்க வைக்கவும். கயிற்றால் இறுக்கமாக கட்டவோ கீறவோ கூடாது. உடனடியாக மருத்துவமனைக்கு அழைத்துச் செல்லவும்."
+    conditions:
+      any_of_danger: ["snake_bite"]
+      any_of_symptoms: ["snake_bite", "poisonous_bite"]
+
+  - id: "RF-PREG-07"
+    group: "pregnant"
+    level: "EMERGENCY"
+    action: "call_108"
+    message_en: "Maternal obstetric emergency (Bleeding, severe headache with blurred vision, fits, severe belly pain, reduced fetal movement, or early water break). Immediate hospital visit."
+    message_ta: "கர்ப்பகால அவசரநிலை (ரத்தப்போக்கு, பார்வைக் கோளாறுடன் கடுமையான தலைவலி, வலிப்பு, வயிற்று வலி அல்லது குழந்தை அசைவு குறைவு). உடனடியாக மருத்துவமனைக்குச் செல்லவும்."
+    conditions:
+      pregnant: true
+      any_of_danger: ["bleeding", "severe_headache_blurred_vision", "fits", "severe_belly_pain", "baby_moving_less", "water_broke"]
+      any_of_symptoms: ["pregnancy_bleeding", "severe_headache_blurred_vision"]
+
+  - id: "RF-CHILD-08"
+    group: "child_under5"
+    level: "EMERGENCY"
+    action: "call_108"
+    message_en: "Pediatric danger sign (Cannot drink/breastfeed, vomits everything, fits, abnormally lethargic/hard to wake, or fast/difficult breathing). Immediate emergency evaluation."
+    message_ta: "குழந்தை ஆபத்து அறிகுறி (தாய்ப்பால்/தண்ணீர் குடிக்க முடியாமை, அனைத்து உணவும் வாந்தி, வலிப்பு, விழித்தெழாமை அல்லது வேகமான மூச்சு). உடனே அவசர சிகிச்சை தேவை."
+    conditions:
+      child_under5: true
+      any_of_danger: ["cannot_drink", "vomits_everything", "fits", "hard_to_wake", "fast_difficult_breathing"]
+
+  - id: "RF-FEVER-09"
+    group: "any"
+    level: "EMERGENCY"
+    action: "call_108"
+    message_en: "Possible meningitis or severe sepsis (Fever accompanied by stiff neck or non-blanching dark rash). Immediate emergency hospitalization."
+    message_ta: "கடும் தொற்று அல்லது மூளைக்காய்ச்சல் அறிகுறி (காய்ச்சலுடன் கழுத்து விறைப்பு அல்லது அழுத்தினால் மறையாத தடிப்பு). உடனே மருத்துவமனைக்குச் செல்லவும்."
+    conditions:
+      symptoms: ["fever"]
+      any_of_danger: ["stiff_neck", "rash_not_fading"]
+
+  - id: "RF-HEAT-10"
+    group: "any"
+    level: "EMERGENCY"
+    action: "call_108"
+    message_en: "Heat stroke emergency (Extreme heat exposure with confusion, fainting, or hot dry skin). Cool down immediately and call 108."
+    message_ta: "வெப்பத்தாக்குதல் அவசரநிலை (சூரிய வெப்ப பாதிப்பு, மயக்கம், அல்லது வறண்ட சுடு தோல்). உடனடியாக குளிர்ந்த இடத்தில் வைத்து 108 அழைக்கவும்."
+    conditions:
+      context: ["heat_exposure"]
+      any_of_danger: ["confusion", "fainting", "hot_dry_skin"]
+
+  - id: "RF-DENGUE-11"
+    group: "any"
+    level: "URGENT"
+    action: "phc_today"
+    message_en: "Dengue warning signs (Fever 2+ days with bleeding gums/nose, red petechial spots, severe abdominal pain, persistent vomiting, or extreme weakness). Visit PHC today for platelet check."
+    message_ta: "டெங்கு எச்சரிக்கை அறிகுறிகள் (2+ நாள் காய்ச்சல், ஈறுகளில் ரத்தம், சிவப்பு புள்ளிகள், கடுமையான வயிற்று வலி அல்லது தொடர் வாந்தி). இன்றே ஆரம்ப சுகாதார நிலையத்திற்குச் செல்லவும்."
+    conditions:
+      symptoms: ["fever"]
+      min_duration_days: 2
+      any_of_danger: ["bleeding_gums_nose", "red_spots", "severe_belly_pain", "vomiting_frequent", "extreme_weakness"]
+
+  - id: "RF-DEHYD-12"
+    group: "any"
+    level: "URGENT"
+    action: "phc_today"
+    message_en: "Severe dehydration (Diarrhoea or vomiting with no urination for 8+ hours, severe dizziness on standing, or inability to keep liquids down). Start ORS and see a doctor today."
+    message_ta: "கடுமையான நீரிழப்பு (வயிற்றுப்போக்கு/வாந்தியுடன் 8+ மணி நேரம் சிறுநீர் வராமை, மயக்கம், திரவம் குடிக்க முடியாமை). ORS குடித்து இன்றே மருத்துவரை அணுகவும்."
+    conditions:
+      any_of_symptoms: ["diarrhoea", "vomiting", "loose_motions"]
+      any_of_danger: ["no_urine_8h", "dizzy_standing", "cant_keep_fluids"]
+
+  - id: "RF-SUGAR-13"
+    group: "any"
+    level: "URGENT"
+    action: "phc_today"
+    message_en: "Diabetic glycemic crisis (Known diabetes with shaking, sweating, drowsiness, or mental confusion). Test blood sugar and visit PHC today."
+    message_ta: "சர்க்கரை நோய் அவசரநிலை (நடுக்கம், வியர்வை, தூக்கக் கலக்கம் அல்லது குழப்பம்). உடனடியாக ரத்த சர்க்கரை பரிசோதிக்கவும்."
+    conditions:
+      conditions_present: ["diabetes"]
+      any_of_danger: ["shaking_sweating", "drowsy", "confused"]
+
+  - id: "RF-FEVER-14"
+    group: "any"
+    level: "URGENT"
+    action: "phc_today"
+    message_en: "Prolonged fever (Fever persisting for more than 7 days). Complete medical evaluation and lab investigations required today."
+    message_ta: "நீண்ட நாள் காய்ச்சல் (7 நாட்களுக்கு மேல் நீடிக்கும் காய்ச்சல்). இன்றே ஆரம்ப சுகாதார நிலையத்தில் பரிசோதிக்கவும்."
+    conditions:
+      symptoms: ["fever"]
+      min_duration_days: 7
+
+  - id: "RF-MIND-15"
+    group: "any"
+    level: "CRISIS"
+    action: "tele_manas"
+    message_en: "Emotional crisis or distress detected. You are not alone and free, confidential compassionate support is available right now. Please call Tele-MANAS at 14416 (free 24/7 helpline) or 108."
+    message_ta: "மன அழுத்த அவசரநிலை. நீங்கள் தனியாக இல்லை; அன்பான இலவச உதவி எப்போதும் உள்ளது. இலவச மனநல உதவி எண் Tele-MANAS: 14416 அல்லது 108 அழைக்கவும்."
+    conditions:
+      any_of_danger: ["self_harm", "suicide_thoughts"]
+      any_of_symptoms: ["self_harm", "suicide_thoughts"]
+
+  - id: "LAB-HB-01"
+    group: "lab"
+    level: "URGENT"
+    action: "phc_today"
+    message_en: "Critical anaemia (Haemoglobin below 7.0 g/dL requires urgent evaluation; 7.0 - 9.9 g/dL requires PHC visit for iron therapy)."
+    message_ta: "கடுமையான ரத்த சோகை (ஹீமோகுளோபின் அளவு மிகவும் குறைவாக உள்ளது). ஆரம்ப சுகாதார நிலையத்தில் உடனே பரிசோதிக்கவும்."
+    conditions:
+      lab_test: "HB"
+      thresholds:
+        critical_urgent: 7.0
+        moderate_phc: 9.9
+
+  - id: "LAB-HB-02"
+    group: "lab"
+    level: "PHC_VISIT"
+    action: "phc_today"
+    message_en: "Rapid haemoglobin drop (Haemoglobin dropped by 2.0 g/dL or more within 12 months). Clinical workup for ongoing blood loss or nutritional deficiency advised."
+    message_ta: "ஹீமோகுளோபின் விரைவாக குறைந்துள்ளது (கடந்த சில மாதங்களில் 2.0 g/dL குறைந்துள்ளது). மருத்துவ ஆலோசனை தேவை."
+    conditions:
+      lab_test: "HB"
+      drop_amount: 2.0
+      within_months: 12
+
+  - id: "LAB-PLT-01"
+    group: "lab"
+    level: "EMERGENCY"
+    action: "call_108"
+    message_en: "Critical thrombocytopenia (Platelets below 20,000 /µL is an emergency; 20,000 - 99,999 with fever is urgent for dengue monitoring)."
+    message_ta: "ரத்த தட்டணுக்கள் (Platelets) அபாயகரமான குறைவு. உடனடியாக மருத்துவமனைக்குச் செல்லவும்."
+    conditions:
+      lab_test: "PLT"
+      emergency_threshold: 20000
+      urgent_with_fever: 100000
+
+  - id: "LAB-GLU-01"
+    group: "lab"
+    level: "URGENT"
+    action: "phc_today"
+    message_en: "Severe blood glucose abnormality (Blood glucose 400 mg/dL or higher, or below 54 mg/dL). Immediate medical attention required."
+    message_ta: "ரத்த சர்க்கரை அளவு ஆபத்தான நிலையில் உள்ளது (400 mg/dL க்கு மேல் அல்லது 54 mg/dL க்கு கீழ்). உடனடியாக மருத்துவரை அணுகவும்."
+    conditions:
+      lab_tests: ["FBS", "PPBS", "RBS"]
+      high_threshold: 400
+      low_threshold: 54
+
+  - id: "LAB-CREAT-01"
+    group: "lab"
+    level: "URGENT"
+    action: "phc_today"
+    message_en: "Elevated serum creatinine (Creatinine 3.0 mg/dL or higher suggests acute or severe kidney impairment). See a physician today."
+    message_ta: "சீரம் கிரியேட்டினின் அளவு அதிகம் (3.0 mg/dL க்கு மேல் - சிறுநீரக பாதிப்பு அறிகுறி). இன்றே மருத்துவரை அணுகவும்."
+    conditions:
+      lab_test: "CREAT"
+      high_threshold: 3.0

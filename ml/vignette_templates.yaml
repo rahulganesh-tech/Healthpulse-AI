@@ -1,0 +1,215 @@
+# Symptom Pattern Vignette Templates for Calibrated Triage Model
+# 40 core clinical patterns covering SELF_CARE, PHC_VISIT, URGENT, and EMERGENCY
+templates:
+  # SELF_CARE (Mild, self-limiting)
+  - id: "SC-01"
+    name: "Mild head cold"
+    symptoms: ["runny_nose", "sneezing", "mild_throat_irritation"]
+    duration_days_range: [1, 4]
+    level: "SELF_CARE"
+  - id: "SC-02"
+    name: "Mild seasonal fatigue"
+    symptoms: ["tiredness", "mild_body_ache"]
+    duration_days_range: [1, 3]
+    level: "SELF_CARE"
+  - id: "SC-03"
+    name: "Occasional tension headache"
+    symptoms: ["headache"]
+    duration_days_range: [1, 2]
+    level: "SELF_CARE"
+  - id: "SC-04"
+    name: "Mild indigestion after heavy food"
+    symptoms: ["mild_bloating", "burping"]
+    duration_days_range: [1, 2]
+    level: "SELF_CARE"
+  - id: "SC-05"
+    name: "Minor superficial abrasion"
+    symptoms: ["minor_cut", "mild_pain"]
+    duration_days_range: [1, 2]
+    level: "SELF_CARE"
+  - id: "SC-06"
+    name: "Mild post-exercise muscle soreness"
+    symptoms: ["body_pain"]
+    duration_days_range: [1, 3]
+    level: "SELF_CARE"
+  - id: "SC-07"
+    name: "Mild dry cough without fever"
+    symptoms: ["cough"]
+    duration_days_range: [1, 3]
+    level: "SELF_CARE"
+  - id: "SC-08"
+    name: "Slight throat itch"
+    symptoms: ["throat_irritation"]
+    duration_days_range: [1, 2]
+    level: "SELF_CARE"
+  - id: "SC-09"
+    name: "Mild sun fatigue"
+    symptoms: ["mild_headache", "thirst"]
+    duration_days_range: [1, 2]
+    level: "SELF_CARE"
+  - id: "SC-10"
+    name: "Single episode mild loose stool"
+    symptoms: ["loose_motions"]
+    duration_days_range: [1, 1]
+    level: "SELF_CARE"
+
+  # PHC_VISIT (Subacute, needs clinical evaluation within 24-48h)
+  - id: "PV-01"
+    name: "Uncomplicated viral fever 3 days with myalgia (Karthik persona prototype)"
+    symptoms: ["fever", "body_pain", "headache"]
+    duration_days_range: [2, 4]
+    level: "PHC_VISIT"
+  - id: "PV-02"
+    name: "Persistent productive cough 5 days"
+    symptoms: ["cough", "phlegm", "mild_fever"]
+    duration_days_range: [4, 7]
+    level: "PHC_VISIT"
+  - id: "PV-03"
+    name: "Burning micturition (suspected UTI)"
+    symptoms: ["burning_urine", "frequent_urination", "lower_belly_discomfort"]
+    duration_days_range: [2, 5]
+    level: "PHC_VISIT"
+  - id: "PV-04"
+    name: "Mild gastroenteritis responding to oral fluids"
+    symptoms: ["loose_motions", "mild_nausea", "stomach_cramps"]
+    duration_days_range: [2, 4]
+    level: "PHC_VISIT"
+  - id: "PV-05"
+    name: "Localized joint swelling or subacute knee pain"
+    symptoms: ["joint_pain", "swelling_knee", "morning_stiffness"]
+    duration_days_range: [5, 14]
+    level: "PHC_VISIT"
+  - id: "PV-06"
+    name: "Skin rash with itching"
+    symptoms: ["itchy_rash", "redness_skin"]
+    duration_days_range: [3, 7]
+    level: "PHC_VISIT"
+  - id: "PV-07"
+    name: "Earache and fullness"
+    symptoms: ["ear_pain", "reduced_hearing"]
+    duration_days_range: [2, 5]
+    level: "PHC_VISIT"
+  - id: "PV-08"
+    name: "Moderate back pain limiting bend"
+    symptoms: ["back_pain", "muscle_stiffness"]
+    duration_days_range: [3, 10]
+    level: "PHC_VISIT"
+  - id: "PV-09"
+    name: "Mild dizziness without syncope"
+    symptoms: ["dizziness_fainting", "mild_weakness"]
+    duration_days_range: [2, 5]
+    level: "PHC_VISIT"
+  - id: "PV-10"
+    name: "Persistent sore throat with difficulty swallowing"
+    symptoms: ["sore_throat", "fever", "difficulty_swallowing"]
+    duration_days_range: [3, 6]
+    level: "PHC_VISIT"
+
+  # URGENT (Same day evaluation required at PHC/CHC)
+  - id: "UR-01"
+    name: "High fever with chills and vomiting"
+    symptoms: ["fever", "cold_chills", "vomiting", "weakness"]
+    duration_days_range: [2, 5]
+    level: "URGENT"
+  - id: "UR-02"
+    name: "Severe watery diarrhoea with moderate dehydration"
+    symptoms: ["loose_motions", "vomiting", "dry_mouth", "dizziness_standing"]
+    duration_days_range: [2, 4]
+    level: "URGENT"
+  - id: "UR-03"
+    name: "Fever 4 days in monsoon season with rash/bleed tendencies"
+    symptoms: ["fever", "headache", "eye_pain", "extreme_fatigue"]
+    duration_days_range: [3, 6]
+    level: "URGENT"
+  - id: "UR-04"
+    name: "Diabetic patient with high fever and non-healing foot wound"
+    symptoms: ["fever", "foot_ulcer", "pus_discharge"]
+    conditions: ["diabetes"]
+    duration_days_range: [3, 10]
+    level: "URGENT"
+  - id: "UR-05"
+    name: "Severe abdominal colic with bilious vomiting"
+    symptoms: ["severe_abdominal_pain", "vomiting", "inability_to_eat"]
+    duration_days_range: [1, 2]
+    level: "URGENT"
+  - id: "UR-06"
+    name: "Asthma flare with moderate wheezing"
+    symptoms: ["breathless", "cough", "wheezing"]
+    conditions: ["asthma"]
+    duration_days_range: [1, 2]
+    level: "URGENT"
+  - id: "UR-07"
+    name: "Deep wound requiring suturing and tetanus immunization"
+    symptoms: ["deep_cut", "persistent_ooze", "wound_pain"]
+    duration_days_range: [1, 1]
+    level: "URGENT"
+  - id: "UR-08"
+    name: "Prolonged high fever beyond one week"
+    symptoms: ["fever", "loss_of_appetite", "weight_loss"]
+    duration_days_range: [8, 14]
+    level: "URGENT"
+  - id: "UR-09"
+    name: "Sudden painful red eye with reduced vision"
+    symptoms: ["eye_pain", "eye_redness", "photophobia"]
+    duration_days_range: [1, 2]
+    level: "URGENT"
+  - id: "UR-10"
+    name: "High fever in hypertensive elderly"
+    symptoms: ["fever", "drowsiness", "severe_body_pain"]
+    conditions: ["hypertension"]
+    duration_days_range: [2, 4]
+    level: "URGENT"
+
+  # EMERGENCY (Immediate hospital / 108 required)
+  - id: "EM-01"
+    name: "Acute chest pain with diaphoresis (Murugan prototype)"
+    symptoms: ["chest_pain", "sweating", "breathless"]
+    duration_days_range: [1, 1]
+    level: "EMERGENCY"
+  - id: "EM-02"
+    name: "Third-trimester severe preeclampsia signs (Selvi prototype)"
+    symptoms: ["severe_headache", "blurred_vision", "swollen_feet"]
+    pregnant: true
+    duration_days_range: [1, 1]
+    level: "EMERGENCY"
+  - id: "EM-03"
+    name: "Pediatric severe dehydration with lethargy (Kavya prototype)"
+    symptoms: ["loose_motions", "vomiting", "not_drinking", "very_sleepy"]
+    child_under5: true
+    duration_days_range: [1, 2]
+    level: "EMERGENCY"
+  - id: "EM-04"
+    name: "Sudden neurological deficit / Stroke"
+    symptoms: ["face_droop", "one_sided_weakness", "slurred_speech"]
+    duration_days_range: [1, 1]
+    level: "EMERGENCY"
+  - id: "EM-05"
+    name: "Severe acute respiratory distress"
+    symptoms: ["breathless_at_rest", "blue_lips", "cant_speak"]
+    duration_days_range: [1, 1]
+    level: "EMERGENCY"
+  - id: "EM-06"
+    name: "Massive GI bleeding"
+    symptoms: ["vomiting_blood", "black_stools", "severe_pallor"]
+    duration_days_range: [1, 1]
+    level: "EMERGENCY"
+  - id: "EM-07"
+    name: "Acute snake envenomation"
+    symptoms: ["snake_bite", "local_fang_marks", "swelling", "dizziness"]
+    duration_days_range: [1, 1]
+    level: "EMERGENCY"
+  - id: "EM-08"
+    name: "Heat stroke with delirium"
+    symptoms: ["high_fever", "confusion", "hot_dry_skin", "fainting"]
+    duration_days_range: [1, 1]
+    level: "EMERGENCY"
+  - id: "EM-09"
+    name: "Suspected bacterial meningitis"
+    symptoms: ["fever", "stiff_neck", "vomiting", "photophobia"]
+    duration_days_range: [1, 2]
+    level: "EMERGENCY"
+  - id: "EM-10"
+    name: "Acute severe allergic anaphylaxis"
+    symptoms: ["swollen_lips", "throat_tightness", "severe_breathlessness", "hives"]
+    duration_days_range: [1, 1]
+    level: "EMERGENCY"

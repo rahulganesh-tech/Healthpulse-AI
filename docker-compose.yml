@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./healthpulse.db
+      - JWT_SECRET=healthpulse-docker-secret-key-2026
+      - OTP_DEMO_CODE=482913
+      - CORS_ORIGINS=["http://localhost:3000","http://localhost:5173"]
+    volumes:
+      - ./healthpulse.db:/app/healthpulse.db
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend

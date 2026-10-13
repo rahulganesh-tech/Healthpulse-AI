@@ -1,0 +1,42 @@
+{
+  "dataset": "ml/eval_vignettes.csv",
+  "sample_count": 60,
+  "under_triage_rate": 0.0167,
+  "over_triage_rate": 0.1167,
+  "accuracy": 0.8667,
+  "emergency_under_triage_count": 0,
+  "emergency_under_triage_rate": 0.0,
+  "recall_per_level": {
+    "SELF_CARE": 0.9,
+    "PHC_VISIT": 0.7333,
+    "URGENT": 0.8,
+    "EMERGENCY": 1.0
+  },
+  "confusion_matrix": {
+    "SELF_CARE": {
+      "SELF_CARE": 9,
+      "PHC_VISIT": 0,
+      "URGENT": 1,
+      "EMERGENCY": 0
+    },
+    "PHC_VISIT": {
+      "SELF_CARE": 1,
+      "PHC_VISIT": 11,
+      "URGENT": 2,
+      "EMERGENCY": 1
+    },
+    "URGENT": {
+      "SELF_CARE": 0,
+      "PHC_VISIT": 0,
+      "URGENT": 12,
+      "EMERGENCY": 3
+    },
+    "EMERGENCY": {
+      "SELF_CARE": 0,
+      "PHC_VISIT": 0,
+      "URGENT": 0,
+      "EMERGENCY": 20
+    }
+  },
+  "baseline_llm_comparison": "baseline not run"
+}

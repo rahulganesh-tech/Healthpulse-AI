@@ -1,0 +1,64 @@
+id,description,age_band,sex,pregnant,child_under5,duration_days,symptoms,conditions,danger_answers,monsoon_season,true_level,expected_rule
+EV-01,"Murugan: 58M chest pain sweating, wife adds gas dhaan",40-59,M,false,false,1,"chest_pain;sweating","","sweating",false,EMERGENCY,RF-CHEST-01
+EV-02,"Selvi: 24F pregnant severe headache blurred vision",18-39,F,true,false,1,"severe_headache;blurred_vision","","severe_headache_blurred_vision",false,EMERGENCY,RF-PREG-07
+EV-03,"Kavya: 3F loose motions not drinking lethargic",0-4,F,false,true,1,"loose_motions;vomiting","","cannot_drink;hard_to_wake",false,EMERGENCY,RF-CHILD-08
+EV-04,"62M acute face droop and slurred speech",60+,M,false,false,1,"face_droop;slurred_speech","","face_droop;slurred_speech",false,EMERGENCY,RF-STROKE-02
+EV-05,"45M severe breathlessness at rest blue lips",40-59,M,false,false,1,"breathless","asthma","breathless_at_rest;blue_lips",false,EMERGENCY,RF-BREATH-03
+EV-06,"30M unconscious following head trauma",18-39,M,false,false,1,"unconscious","","unconscious",false,EMERGENCY,RF-CONSC-04
+EV-07,"50M vomiting frank blood",40-59,M,false,false,1,"vomiting_blood;black_stools","","vomiting_blood",false,EMERGENCY,RF-BLEED-05
+EV-08,"28F snake bite in paddy field",18-39,F,false,false,1,"snake_bite","","snake_bite",true,EMERGENCY,RF-SNAKE-06
+EV-09,"22F high fever with stiff neck and purpura",18-39,F,false,false,1,"fever;stiff_neck","","stiff_neck;rash_not_fading",false,EMERGENCY,RF-FEVER-09
+EV-10,"55M heat stroke collapsed in agricultural field",40-59,M,false,false,1,"confusion;fainting","","confusion;hot_dry_skin",false,EMERGENCY,RF-HEAT-10
+EV-11,"67M crushing chest pain radiating to left jaw",60+,M,false,false,1,"chest_pain;arm_jaw_pain","heart_disease","arm_jaw_pain",false,EMERGENCY,RF-CHEST-01
+EV-12,"2F toddler seizure with high fever",0-4,F,false,true,1,"fever;fits","","fits",false,EMERGENCY,RF-CHILD-08
+EV-13,"32F pregnant 34 weeks sudden vaginal bleeding",18-39,F,true,false,1,"pregnancy_bleeding","","bleeding",false,EMERGENCY,RF-PREG-07
+EV-14,"70F sudden one sided leg paralysis",60+,F,false,false,1,"one_sided_weakness","hypertension","one_sided_weakness",false,EMERGENCY,RF-STROKE-02
+EV-15,"48M hematemesis with heavy alcohol history",40-59,M,false,false,1,"vomiting_blood","","vomiting_blood",false,EMERGENCY,RF-BLEED-05
+EV-16,"18M Russel viper bite to right foot",18-39,M,false,false,1,"snake_bite","","snake_bite",false,EMERGENCY,RF-SNAKE-06
+EV-17,"29F pregnant severe epigastric pain and seizures",18-39,F,true,false,1,"severe_belly_pain;fits","","fits;severe_belly_pain",false,EMERGENCY,RF-PREG-07
+EV-18,"4M child persistent vomiting everything fast breathing",0-4,M,false,true,1,"vomiting;fast_difficult_breathing","","vomits_everything;fast_difficult_breathing",false,EMERGENCY,RF-CHILD-08
+EV-19,"52M severe breathlessness unable to complete words",40-59,M,false,false,1,"severe_breathlessness","","breathless_at_rest;cant_speak_sentences",false,EMERGENCY,RF-BREATH-03
+EV-20,"41M acute chest pressure age 40+ alone",40-59,M,false,false,1,"chest_pressure","","chest_pressure",false,EMERGENCY,RF-CHEST-01
+
+EV-21,"Fever 4 days with gum bleeding and rash in monsoon",18-39,M,false,false,4,"fever;headache;bleeding_gums","","bleeding_gums_nose;red_spots",true,URGENT,RF-DENGUE-11
+EV-22,"Diarrhoea vomiting no urine for 10 hours",40-59,F,false,false,2,"diarrhoea;vomiting","","no_urine_8h;cant_keep_fluids",false,URGENT,RF-DEHYD-12
+EV-23,"Diabetic patient with tremor sweating and confusion",40-59,M,false,false,1,"shaking_sweating;confused","diabetes","shaking_sweating;confused",false,URGENT,RF-SUGAR-13
+EV-24,"High fever persisting 9 days with chills",18-39,M,false,false,9,"fever;cold_chills","","",false,URGENT,RF-FEVER-14
+EV-25,"High fever in monsoon with extreme weakness vomiting 4x",18-39,F,false,false,3,"fever;vomiting","","vomiting_frequent;extreme_weakness",true,URGENT,RF-DENGUE-11
+EV-26,"Severe gastro with severe dizziness on standing",40-59,F,false,false,2,"loose_motions;vomiting","","dizzy_standing",false,URGENT,RF-DEHYD-12
+EV-27,"Diabetic 55F drowsy with high ketones suspicion",40-59,F,false,false,1,"fever;drowsy","diabetes","drowsy",false,URGENT,RF-SUGAR-13
+EV-28,"Undiagnosed prolonged fever 11 days",5-17,F,false,false,11,"fever;fatigue","","",false,URGENT,RF-FEVER-14
+EV-29,"Severe acute asthma flare with wheeze and retractions",18-39,M,false,false,1,"breathless;wheezing","asthma","",false,URGENT,""
+EV-30,"High fever 4 days with petechial rash",18-39,M,false,false,4,"fever;red_spots","","red_spots",true,URGENT,RF-DENGUE-11
+EV-31,"Severe abdominal colic with bile vomiting",40-59,M,false,false,1,"severe_abdominal_pain;vomiting","","",false,URGENT,""
+EV-32,"Diabetic foot deep ulcer with fever",60+,M,false,false,5,"fever;foot_ulcer","diabetes","",false,URGENT,""
+EV-33,"Deep laceration with heavy ooze needing stitches",18-39,M,false,false,1,"deep_cut;wound_pain","","",false,URGENT,""
+EV-34,"Elderly hypertensive with fever and somnolence",60+,F,false,false,3,"fever;drowsiness","hypertension","",false,URGENT,""
+EV-35,"Acute red painful eye with light sensitivity",18-39,F,false,false,1,"eye_pain;photophobia","","",false,URGENT,""
+
+EV-36,"Karthik: 19M fever 3 days body pain headache danger No monsoon",18-39,M,false,false,3,"fever;body_pain;headache","","",true,PHC_VISIT,""
+EV-37,"Lakshmi: 45F Hb 8.9 g/dL fell from 11.2 (trend)",40-59,F,false,false,7,"tiredness;body_pain","","",false,PHC_VISIT,LAB-HB-01
+EV-38,"25F burning urination lower abdominal discomfort 3 days",18-39,F,false,false,3,"burning_urine;frequent_urination","","",false,PHC_VISIT,""
+EV-39,"50M productive cough with yellowish sputum 6 days",40-59,M,false,false,6,"cough;phlegm;mild_fever","","",false,PHC_VISIT,""
+EV-40,"35M viral fever 2 days responding to hydration",18-39,M,false,false,2,"fever;mild_headache","","",false,PHC_VISIT,""
+EV-41,"60F bilateral knee osteoarthritis flare 10 days",60+,F,false,false,10,"joint_pain;swelling_knee","","",false,PHC_VISIT,""
+EV-42,"28M generalized itchy erythematous rash 4 days",18-39,M,false,false,4,"itchy_rash;redness_skin","","",false,PHC_VISIT,""
+EV-43,"12M persistent ear pain with discharge 3 days",5-17,M,false,false,3,"ear_pain;reduced_hearing","","",false,PHC_VISIT,""
+EV-44,"44M lower mechanical back pain 5 days",40-59,M,false,false,5,"back_pain;muscle_stiffness","","",false,PHC_VISIT,""
+EV-45,"31F recurrent benign positional vertigo 3 days",18-39,F,false,false,3,"dizziness_fainting;mild_weakness","","",false,PHC_VISIT,""
+EV-46,"20F acute pharyngitis with tonsillar exudate 3 days",18-39,F,false,false,3,"sore_throat;fever;difficulty_swallowing","","",false,PHC_VISIT,""
+EV-47,"52F chronic mild dry cough 12 days non-smoker",40-59,F,false,false,12,"cough;throat_irritation","","",false,PHC_VISIT,""
+EV-48,"16M mild viral conjunctivitis with discharge 2 days",5-17,M,false,false,2,"eye_redness;discharge","","",false,PHC_VISIT,""
+EV-49,"40M dyspepsia with acid regurgitation 5 days",40-59,M,false,false,5,"stomach_pain;acid_reflux","","",false,PHC_VISIT,""
+EV-50,"22M superficial fungal ringworm groin 7 days",18-39,M,false,false,7,"itchy_rash","","",false,PHC_VISIT,""
+
+EV-51,"Common cold runny nose sneezing 2 days",18-39,M,false,false,2,"runny_nose;sneezing","","",false,SELF_CARE,""
+EV-52,"Mild tension headache after screen time",18-39,F,false,false,1,"headache","","",false,SELF_CARE,""
+EV-53,"Mild fatigue after travelling 1 day",40-59,M,false,false,1,"tiredness;mild_body_ache","","",false,SELF_CARE,""
+EV-54,"Mild bloating after festive meal",18-39,M,false,false,1,"mild_bloating;burping","","",false,SELF_CARE,""
+EV-55,"Minor scratch cleaned with soap and water",18-39,F,false,false,1,"minor_cut;mild_pain","","",false,SELF_CARE,""
+EV-56,"Delayed onset muscle soreness post sports",18-39,M,false,false,2,"body_pain","","",false,SELF_CARE,""
+EV-57,"Single episode mild loose stool no cramps",40-59,F,false,false,1,"loose_motions","","",false,SELF_CARE,""
+EV-58,"Mild dry throat from dusty wind",18-39,M,false,false,1,"throat_irritation","","",false,SELF_CARE,""
+EV-59,"Slight head heaviness relieved with rest",40-59,M,false,false,1,"mild_headache","","",false,SELF_CARE,""
+EV-60,"Minor lip chap and dry skin",18-39,F,false,false,2,"dry_skin","","",false,SELF_CARE,""

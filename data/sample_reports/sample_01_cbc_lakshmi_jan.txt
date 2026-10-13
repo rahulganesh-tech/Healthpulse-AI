@@ -1,0 +1,9 @@
+NELLAI DIAGNOSTICS & RESEARCH LAB
+        PATIENT: DEMO CITIZEN | AGE: 45 | SEX: F
+        DATE: 15-JAN-2026
+        ------------------------------------------
+        COMPLETE BLOOD COUNT (CBC)
+        Haemoglobin (Hb)              : 11.2 g/dL     (12.0 - 16.0)
+        Platelet Count (PLT)          : 260,000 /µL   (150,000 - 450,000)
+        Total Leucocyte Count (TLC)   : 6,400 /µL     (4,000 - 11,000)
+        ------------------------------------------

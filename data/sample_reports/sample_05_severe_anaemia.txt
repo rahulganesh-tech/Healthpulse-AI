@@ -1,0 +1,3 @@
+GOVERNMENT HEADQUARTERS HOSPITAL LAB
+        Hb (Haemoglobin)              : 6.4 g/dL      (12.0 - 16.0) CRITICAL
+        Total Leucocyte Count         : 7,200 /µL     (4,000 - 11,000)

@@ -1,0 +1,187 @@
+# Tamil, Tanglish and English Symptom Lexicon
+version: "1.0"
+symptoms:
+  - id: "fever"
+    canonical: "fever"
+    en: "Fever"
+    ta: "காய்ச்சல்"
+    synonyms:
+      - "kaichal"
+      - "kaaichal"
+      - "kaychal"
+      - "jvaram"
+      - "suram"
+      - "fever"
+      - "high temp"
+      - "சூடு"
+      - "சுரம்"
+      - "காய்ச்சல்"
+
+  - id: "chest_pain"
+    canonical: "chest_pain"
+    en: "Chest pain"
+    ta: "நெஞ்சு வலி"
+    synonyms:
+      - "nenju vali"
+      - "nenjuvali"
+      - "nenjula vali"
+      - "chest pain"
+      - "chest pressure"
+      - "chest tightness"
+      - "நெஞ்சு வலி"
+      - "மார்பு வலி"
+
+  - id: "sweating"
+    canonical: "sweating"
+    en: "Excessive sweating"
+    ta: "அதிக வியர்வை"
+    synonyms:
+      - "romba viyarvai"
+      - "viyarvai"
+      - "viarvai"
+      - "profuse sweating"
+      - "sweating"
+      - "cold sweat"
+      - "வியர்வை"
+
+  - id: "body_pain"
+    canonical: "body_pain"
+    en: "Body pain"
+    ta: "உடம்பு வலி"
+    synonyms:
+      - "udambu vali"
+      - "udambuvali"
+      - "udambellam vali"
+      - "body pain"
+      - "myalgia"
+      - "body ache"
+      - "உடம்பு வலி"
+
+  - id: "headache"
+    canonical: "headache"
+    en: "Headache"
+    ta: "தலைவலி"
+    synonyms:
+      - "thalai vali"
+      - "thalaivali"
+      - "mandai vali"
+      - "headache"
+      - "head ache"
+      - "migraine"
+      - "தலைவலி"
+
+  - id: "breathless"
+    canonical: "breathless"
+    en: "Shortness of breath"
+    ta: "மூச்சுத் திணறல்"
+    synonyms:
+      - "moochu vaangudhu"
+      - "moochu thinarel"
+      - "moochu vida mudiyala"
+      - "shortness of breath"
+      - "breathless"
+      - "difficulty breathing"
+      - "மூச்சுத்திணறல்"
+
+  - id: "vomiting"
+    canonical: "vomiting"
+    en: "Vomiting"
+    ta: "வாந்தி"
+    synonyms:
+      - "vaandhi"
+      - "vanthi"
+      - "vomiting"
+      - "vomit"
+      - "nausea"
+      - "வாந்தி"
+
+  - id: "diarrhoea"
+    canonical: "diarrhoea"
+    en: "Diarrhoea / Loose motions"
+    ta: "வயிற்றுப்போக்கு"
+    synonyms:
+      - "bedhi"
+      - "baedhi"
+      - "loose motions"
+      - "loose motion"
+      - "diarrhoea"
+      - "diarrhea"
+      - "vayiru pokku"
+      - "வயிற்றுப்போக்கு"
+      - "பேதி"
+
+  - id: "dizziness_fainting"
+    canonical: "dizziness_fainting"
+    en: "Dizziness or fainting"
+    ta: "மயக்கம்"
+    synonyms:
+      - "mayakkam"
+      - "thalai sutthudhu"
+      - "dizziness"
+      - "fainting"
+      - "vertigo"
+      - "syncope"
+      - "மயக்கம்"
+
+  - id: "blurred_vision"
+    canonical: "blurred_vision"
+    en: "Blurred vision"
+    ta: "பார்வை மங்கல்"
+    synonyms:
+      - "blurred vision"
+      - "kan paarvai mangal"
+      - "kannil iruttu"
+      - "double vision"
+      - "பார்வை மங்கல்"
+
+  - id: "cough"
+    canonical: "cough"
+    en: "Cough"
+    ta: "இருமல்"
+    synonyms:
+      - "irumal"
+      - "erumal"
+      - "cough"
+      - "dry cough"
+      - "wet cough"
+      - "இருமல்"
+
+  - id: "cold_chills"
+    canonical: "cold_chills"
+    en: "Chills or shivering"
+    ta: "குளிர் / நடுக்கம்"
+    synonyms:
+      - "kulir"
+      - "nadukkam"
+      - "chills"
+      - "shivering"
+      - "குளிர்"
+      - "நடுக்கம்"
+
+durations:
+  - pattern: '(?i)(\d+)\s*(?:naala|naal|days?|naatkal)'
+    unit: "days"
+  - pattern: '(?i)(?:oru|one)\s*(?:naal|day)'
+    value: 1
+    unit: "days"
+  - pattern: '(?i)(?:rendu|two|2)\s*(?:naala|naal|days?)'
+    value: 2
+    unit: "days"
+  - pattern: '(?i)(?:moonu|three|3)\s*(?:naala|naal|days?)'
+    value: 3
+    unit: "days"
+  - pattern: '(?i)(?:naalu|four|4)\s*(?:naala|naal|days?)'
+    value: 4
+    unit: "days"
+  - pattern: '(?i)(?:anju|five|5)\s*(?:naala|naal|days?)'
+    value: 5
+    unit: "days"
+  - pattern: '(?i)(?:oru\s*vaaram|1\s*week|one\s*week)'
+    value: 7
+    unit: "days"
+  - pattern: '(?i)(?:rendu\s*vaaram|2\s*weeks|two\s*weeks)'
+    value: 14
+    unit: "days"
+  - pattern: '(?i)(?:kalai|morning|iniku\s*kaalaila|since\s*morning)'
+    value: 1
+    unit: "days"
